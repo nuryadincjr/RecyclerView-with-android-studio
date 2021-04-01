@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Latihan Fragmant</string>
+    <string name="home_menu">Home</string>
+    <string name="favorite_menu">Favorit</string>
+    <string name="about_menu">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="home_fragment">Home Fragment</string>
+    <string name="favorit_fragment">Favorit Fragment</string>
+    <string name="about_fragment">About Fragment</string>
+    <string name="nama_autor">Nama : Nuryadin Abitani</string>
+    <string name="npm_autor">NPM : 19552011182</string>
+
+</resources>
