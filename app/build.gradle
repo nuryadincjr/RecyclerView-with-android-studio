@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.abuunity.latihanfragmant"
+        applicationId "com.abuunity.Recyclerview"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
