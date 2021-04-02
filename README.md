@@ -1,6 +1,6 @@
-# Fragment-with-Android-Studio
+# RecyclerView-with-Android-Studio
 
-Implementation a Fragment with Android Studio
+Implementation a Fragment and RecyclerView with Android Studio
 
 ## Screenshots
 
