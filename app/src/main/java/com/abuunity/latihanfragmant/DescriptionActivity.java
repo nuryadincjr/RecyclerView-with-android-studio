@@ -14,6 +14,7 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Team team = getIntent().getParcelableExtra("TEAMS");
         name = findViewById(R.id.textName);
