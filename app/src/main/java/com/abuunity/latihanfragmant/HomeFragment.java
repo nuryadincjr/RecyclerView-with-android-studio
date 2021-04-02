@@ -1,5 +1,6 @@
 package com.abuunity.latihanfragmant;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -22,7 +23,8 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerViewTeam;
     private RecyclerAdapterTeam recyclerAdapterTeam;
     private ArrayList<Team> teamArrayList;
-
+    private String name, desc, logo;
+    Team teams = new Team("", "", "");
 
     public HomeFragment() {
         // Required empty public constructor
@@ -44,7 +46,17 @@ public class HomeFragment extends Fragment {
         recyclerAdapterTeam.setItemClickListener(new ItemClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(getActivity(), teamArrayList.get(position).getNama(), Toast.LENGTH_SHORT).show();
+                String nama = teamArrayList.get(position).getNama();
+                String logo = teamArrayList.get(position).getLogo();
+                String desc = teamArrayList.get(position).getDescription();
+
+                teams.setNama(nama);
+                teams.setLogo(logo);
+                teams.setDescription(desc);
+
+                Intent intent = new Intent(getActivity(), DescriptionActivity.class);
+                intent.putExtra("TEAMS", teams);
+                startActivity(intent);
             }
         });
         return view;
@@ -55,9 +67,10 @@ public class HomeFragment extends Fragment {
             Resources resources = getResources();
             String[] teamName = resources.getStringArray(R.array.club_name);
             final TypedArray teamLogo = resources.obtainTypedArray(R.array.club_image);
+            String[] teamDesc = resources.getStringArray(R.array.club_detail);
             teamArrayList=new ArrayList<Team>();
             for (int i=0; i<teamName.length; i++) {
-                teamArrayList.add(new Team(teamName[i],String.valueOf(teamLogo.getResourceId(i,-1))));
+                teamArrayList.add(new Team(teamName[i],String.valueOf(teamLogo.getResourceId(i,-1)),teamDesc[i]));
             }
         }
     }

@@ -37,7 +37,6 @@ public class RecyclerAdapterTeam extends RecyclerView.Adapter<RecyclerAdapterTea
         viewHolder.txtNo.setText(String.valueOf(no));
         viewHolder.txtTeam.setText(teamArrayList.get(i).getNama());
         viewHolder.imgLogo.setImageResource(Integer.parseInt(teamArrayList.get(i).getLogo()));
-        viewHolder.imgLogo.setImageResource(Integer.parseInt(teamArrayList.get(i).getLogo()));
     }
 
     @Override
